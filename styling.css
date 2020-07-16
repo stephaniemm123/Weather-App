@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	background-image: url(tropical-print.jpg);
 	top: 15%;
 	margin: auto;
 	border-radius: 20px;
@@ -11,6 +11,26 @@ body {
 	max-width: 600px;
 }
 
+#searchbar {
+	width: 50%;
+	background-color: rgb(252, 138, 97);
+	border-color: black;
+}
+
+#current-location-btn,
+#search-select-city {
+	margin: 2%;
+	background-color: rgb(252, 138, 97);
+	color: black;
+	font-weight: bold;
+}
+
+.author {
+	font-size: small;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
 .city {
 	text-align: left;
 }
