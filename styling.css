@@ -4,7 +4,7 @@ body {
 
 .container {
 	background-image: url(tropical-print.jpg);
-	top: 15%;
+	top: 10%;
 	margin: auto;
 	border-radius: 15px;
 	padding: 5%;
@@ -33,6 +33,7 @@ body {
 }
 .city {
 	text-align: left;
+	color: rgb(252, 138, 97);
 }
 
 .row {
