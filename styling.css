@@ -41,8 +41,17 @@ body {
 	top: 0;
 }
 
+.date,
+.description,
+.temperature {
+	color: rgb(252, 138, 97);
+	font-weight: bold;
+}
+
 .col-6 {
 	padding: 1%;
+	color: rgb(252, 138, 97);
+	font-weight: bold;
 }
 
 ul {
