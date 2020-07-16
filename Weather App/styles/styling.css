@@ -11,14 +11,8 @@ body {
 	max-width: 600px;
 }
 
-h1,
-h2 {
+.city {
 	text-align: left;
-}
-
-.i {
-	color: orange;
-	font-size: 60px;
 }
 
 .row {
