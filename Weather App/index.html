@@ -15,47 +15,49 @@
 
 <body>
     <div class="container">
-        <form>
+        <form id="search-form">
             <div class="form-group">
-                <input type="text" class="form-control" id="search-form" placeholder="Search any city" autocompete="off" autofocus="on">
-                <input type="submit" class="btn btn-primary" value="Search" /></form>
-                <input type="button" class="btn btn-primary" id= "current-location-btn" value="Current" /></form>
-					
-						
-							</div>
-								<h1 style="font-weight: bolder;">
-								<div class="city">
-									<span id = "display-city"> San Antonio </span>
+                <input type="text" class="form-control" id="searchbar" placeholder="Search any city" autocompete="off"
+                    autofocus="on">
+                <input type="submit" class="btn btn-primary" value="Search" />
+                <input type="button" class="btn btn-primary" id="current-location-btn" value="Current" />
+        </form>
 
-									</div>
-									<h2>
-										<span id="icon"></span>
-										<strong>
-											<span id="current-degrees"></span>
-											</strong>
 
-                    <i class="fas fa-sun"></i>
-								</h1>
-										<ul>									
-											<li><span class="temperature" id="temperature">30 </span>°C</span></li>
+    </div>
+    <h1 style="font-weight: bolder;">
+        <div class="city">
+            <span id="display-city"> San Antonio </span>
 
-                    <li class = "date">Mon 13:22</li>
-                    <li class = "description">Sunny</li>
-							<div class="row">
-    						<div class="col-6">
-        					<div class="clearfix">
-            				<div class="float-left">
-            				</div>
-        					</div>
-								</div>
-							</div>	
-                    <div class="col-6">
-                        <ul>
-                            <li>Humidity <span id="humidity"></span>%</li>
-                            <li>Wind <span id="wind"></span>kmh</li>
+        </div>
+        <h2>
+            <span id="icon"></span>
+            <strong>
+                <span id="current-degrees"></span>
+            </strong>
+
+            <i class="fas fa-sun"></i>
+    </h1>
+    <ul>
+        <li><span class="temperature" id="temperature">30 </span>°C</span></li>
+
+        <li class="date">Mon 13:22</li>
+        <li class="description">Sunny</li>
+        <div class="row">
+            <div class="col-6">
+                <div class="clearfix">
+                    <div class="float-left">
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <ul>
+                <li>Humidity <span id="humidity"></span>%</li>
+                <li>Wind <span id="wind"></span>kmh</li>
+        </div>
 
-						
+
 </body>
 
 </html>
