@@ -3,24 +3,50 @@ body {
 }
 
 .container {
-	background-image: url(tropical-print.jpg);
-	top: 10%;
+	background: url(src/tropical-print.jpg);
+	top: 15%;
 	margin: auto;
-	border-radius: 15px;
+	border-radius: 20px;
 	padding: 5%;
 	max-width: 550px;
+}
+
+.container2 {
+	background: coral;
+	opacity: 0.85;
+	border-style: solid;
+	border-color: grey;
+	padding: 3%;
+	border-radius: 20px;
 }
 
 #searchbar {
 	width: 50%;
 	background-color: rgb(252, 138, 97);
 	border-color: black;
+	opacity: 0.85;
 }
 
 #current-location-btn,
 #search-select-city {
 	margin: 2%;
 	background-color: rgb(252, 138, 97);
+	color: black;
+	font-weight: bold;
+	opacity: 0.85;
+}
+
+.humidity,
+.wind,
+.icon,
+.current-degrees,
+.date,
+.description,
+.temperature .interior,
+.city .col-6 {
+	text-align: left;
+	font-weight: bold;
+	padding: 1%;
 	color: black;
 	font-weight: bold;
 }
@@ -31,27 +57,9 @@ body {
 	display: block;
 	text-align: center;
 }
-.city {
-	text-align: left;
-	color: rgb(252, 138, 97);
-}
-
 .row {
 	position: relative;
 	top: 0;
-}
-
-.date,
-.description,
-.temperature {
-	color: rgb(252, 138, 97);
-	font-weight: bold;
-}
-
-.col-6 {
-	padding: 1%;
-	color: rgb(252, 138, 97);
-	font-weight: bold;
 }
 
 ul {

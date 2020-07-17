@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta charset="UTF-8" />
-    <link ref="stylesheet" href="styling.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="styling.css" media="screen" />
-
+    <link rel="stylesheet" type="text/css" href="weather.css" media="screen" />
 
 </head>
 
@@ -22,49 +21,47 @@
             <div class="form-group">
                 <input type="text" class="form-control" id="searchbar" placeholder="Search any city" autocompete="off"
                     autofocus="on">
-                <input type="submit" class="btn btn-primary" id="search-select-city" value="Search" />
-                <input type="button" class="btn btn-primary" id="current-location-btn" value="Current" />
+                <input type="submit" id="search-select-city" value="Search" />
+                <input type="button" id="current-location-btn" value="Current" />
         </form>
 
 
     </div>
-    <h1 style="font-weight: bold;">
-        <div class="city">
-            <span id="display-city"> San Antonio </span>
-
-        </div>
-        <h2>
-            <span id="icon"></span>
-            <strong>
-                <span id="current-degrees"></span>
-            </strong>
-
+    <div class="container2">
+        <div class="interior">
+            <div class="city">
+                <h1>
+                    <span id="display-city"> San Antonio </span>
+            </div>
             <i class="fas fa-sun"></i>
-    </h1>
-    <ul>
-        <li><span class="temperature" id="temperature">30 </span>°C</span></li>
-
-        <li class="date" div class="date">Mon 13:22</li>
-        <li class="description" div class="description">Sunny</li>
-        <div class="row">
-            <div class="col-6">
-                <div class="clearfix">
-                    <div class="float-left">
+            <span id="icon" div class="icon"></span>
+            <span id="current-degrees" div class="current-degrees"></span>
+            <ul>
+                <li><span class="temperature" id="temperature">30°C</span></li>
+                <li class="description" div class="description">Sunny</li>
+                <li class="date" div class="date">Monday 13:22</li>
+                <li class="humidity" div class="humidity">Humidity <span id="humidity">41</span>%</li>
+                <li class="wind" div class="wind">Wind <span id="wind">4</span>kmh</li>
+            </ul>
+            <div class="row">
+                <div class="col-6">
+                    <div class="clearfix">
+                        <div class="float-left">
+                        </div>
                     </div>
                 </div>
             </div>
+            </h1>
         </div>
-        <div class="col-6">
-            <ul>
-                <li>Humidity <span id="humidity">41</span>%</li>
-                <li>Wind <span id="wind">4</span>kmh</li>
-        </div>
+    </div>
+    </div>
+    <script src="src/weather.js"></script>
 
-                    
-                <script src="weather.js"></script>    
-</ul>
-</div>
-<div class= "author">This app was coded by <a href="mailto:stephaniemm123@gmail.com"> Stephanie Muñoz</a>: <a
-                            href="https://github.com/stephaniemm123/Weather-App"> Open source code.</a></div>
- </body>   
+
+    </div>
+    <div class="author">This app was coded by <a href="mailto:stephaniemm123@gmail.com"> Stephanie Muñoz</a>: <a
+            href="https://github.com/stephaniemm123/Weather-App"> Open source code.</a></div>
+
+</body>
+
 </html>
