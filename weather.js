@@ -9,10 +9,10 @@ function searchDate(date) {
 		minutes = `0${minutes}`;
 	}
 	let dayIndex = date.getDay();
-	let days = [ 'Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri' ];
+	let days = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' ];
 	let day = days[dayIndex];
 
-	return `${day} ${hours}:${minutes}`;
+	return `${day[dayIndex]} ${hours}:${minutes}`;
 }
 //2
 function displayWeather(response) {
@@ -30,13 +30,14 @@ function displayWeather(response) {
 	document.querySelector('.description').innerHTML = response.data.weather[0].main;
 }
 //3
+//4
 function searchCity(city) {
 	let apiKey = 'd944cfc973fb372d3ea53f75216ec984';
-	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
 	axios.get(apiUrl).then(displayWeather);
 }
-//4
+//5
 function searchbarResults(event) {
 	event.preventDefault();
 	let city = document.querySelector('#searchbar');
@@ -44,29 +45,29 @@ function searchbarResults(event) {
 	displaycity.innerHTML = `${city.value}`;
 	searchCity(city.value);
 }
-//5
+//6
 function searchLocation(position) {
 	let long = position.coords.longitude;
 	let lat = position.coords.latitude;
-	let units = 'metric';
+	//	let units = 'imperial';
 
 	let apiKey = 'd944cfc973fb372d3ea53f75216ec984';
-	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
 
 	axios.get(apiUrl).then(displayWeather);
 }
-//6
+//7
 function getCurrent(event) {
 	event.preventDefault();
 	navigator.geolocation.getCurrentPosition(searchLocation);
 }
-//7
+//8
 let dateElement = document.querySelector('.date');
 let currentTime = new Date();
 dateElement.innerHTML = searchDate(currentTime);
-//8
+//9
 let form = document.querySelector('#search-form');
 form.addEventListener('submit', searchbarResults);
-//9
+//10
 let currentButton = document.querySelector('#current-location-btn');
 currentButton.addEventListener('click', getCurrent);
