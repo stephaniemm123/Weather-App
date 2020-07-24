@@ -37,11 +37,14 @@ function displayForecast(response) {
 
 	for (let index = 0; index < 6; index++) {
 		forecast = response.data.list[index];
-		forecastElement.innerHTML += `
+		forecastElement.innerHTML = `
     <div class="col-2">
       <h3>
-        ${formatHours(forecast.dt * 1000)}
+        12:00
       </h3>
+      <img src="http://openweathermap.org/img/wn/${
+			forecast.weather[0].icon
+			}@2x.png"/>
       <div class="weather-forecast-temperature">
         <strong>
           ${Math.round(forecast.main.temp_max)}°
@@ -49,7 +52,7 @@ function displayForecast(response) {
         ${Math.round(forecast.main.temp_min)}°
       </div>
 	</div>`;
-}
+		}
 
 //4
 function searchCity(city) {
