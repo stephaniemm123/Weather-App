@@ -25,14 +25,14 @@ function displayWeather(response) {
 	heading.innerHTML = `${response.data.name}`;
 	let iconElement = document.querySelector('#icon');
 
-	let brokenClouds = 'images/Broken_Clouds.jpg';
-	let fewClouds = 'images/Few_Clouds.jpg';
+	let broken_Clouds = 'images/Broken_Clouds.jpg';
+	let few_Clouds = 'images/Few_Clouds.jpg';
 	let rain = 'images/rain.jpg';
 
 	document.querySelector('#humidity').innerHTML = response.data.main.humidity;
 	document.querySelector('#wind').innerHTML = Math.round(response.data.wind.speed);
 	document.querySelector('.description').innerHTML = response.data.weather[0].main;
-	iconElement.setAttribute('src', `images/rain.jpg`);
+	iconElement.setAttribute('src', `images/${description}.jpg`);
 	iconElement.setAttribute('alt', response.data.weather[0].description);
 }
 //3
