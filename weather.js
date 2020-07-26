@@ -25,16 +25,14 @@ function displayWeather(response) {
 	heading.innerHTML = `${response.data.name}`;
 	let iconElement = document.querySelector('#icon');
 
-	let 04n = ("images/Broken_Clouds.jpg");
-	let 01d = ("images/Few_Clouds.jpg");
-	let 10d = ("images/Rain.jpg");
-
-
+	let brokenClouds = 'images/Broken_Clouds.jpg';
+	let fewClouds = 'images/Few_Clouds.jpg';
+	let rain = 'images/Rain.jpg';
 
 	document.querySelector('#humidity').innerHTML = response.data.main.humidity;
 	document.querySelector('#wind').innerHTML = Math.round(response.data.wind.speed);
 	document.querySelector('.description').innerHTML = response.data.weather[0].main;
-//	iconElement.setAttribute('src', `http://openweathermap.org/img/wn/${response.data.weather[0]}@2x.png`);
+	iconElement.setAttribute('src', `images`);
 	iconElement.setAttribute('alt', response.data.weather[0].description);
 }
 //3
