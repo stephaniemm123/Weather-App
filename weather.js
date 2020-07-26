@@ -23,15 +23,23 @@ function displayWeather(response) {
 	weatherDisplay.innerHTML = `${temp}`;
 	let heading = document.querySelector(`h1`);
 	heading.innerHTML = `${response.data.name}`;
+	let iconElement = document.querySelector('#icon');
+
+	let 04n = ("images/Broken_Clouds.jpg");
+	let 01d = ("images/Few_Clouds.jpg");
+	let 10d = ("images/Rain.jpg");
+
+
 
 	document.querySelector('#humidity').innerHTML = response.data.main.humidity;
 	document.querySelector('#wind').innerHTML = Math.round(response.data.wind.speed);
-
 	document.querySelector('.description').innerHTML = response.data.weather[0].main;
+//	iconElement.setAttribute('src', `http://openweathermap.org/img/wn/${response.data.weather[0]}@2x.png`);
+	iconElement.setAttribute('alt', response.data.weather[0].description);
 }
 //3
 function displayForecast(response) {
-	let forecastElement = document.querySelector("#forecast");
+	let forecastElement = document.querySelector('#forecast');
 	forecastElement.innerHTML = null;
 	let forecast = null;
 
@@ -42,9 +50,6 @@ function displayForecast(response) {
       <h3>
         12:00
       </h3>
-      <img src="http://openweathermap.org/img/wn/${
-			forecast.weather[0].icon
-			}@2x.png"/>
       <div class="weather-forecast-temperature">
         <strong>
           ${Math.round(forecast.main.temp_max)}°
@@ -52,8 +57,8 @@ function displayForecast(response) {
         ${Math.round(forecast.main.temp_min)}°
       </div>
 	</div>`;
-		}
-
+	}
+}
 //4
 function searchCity(city) {
 	let apiKey = 'd944cfc973fb372d3ea53f75216ec984';

@@ -35,8 +35,7 @@
                 <h1>
                     <span id="display-city"> San Antonio </span>
             </div>
-            <span id="icon" div class="icon"></span>
-            <span id="current-degrees" div class="current-degrees"></span>
+           <span id="current-degrees" div class="current-degrees"></span>
             <ul>
                 <li><span class="temperature" id="temperature">94</span>°F | 30°C</li>
                 <li class="description" div class="description">Sunny</li>
@@ -49,8 +48,9 @@
                         <h3>
                             12:00
                         </h3>
+                        <img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"/>
                         <div class="weather-forecast-temperature">
-                            <strong>16</strong>15°
+                            <strong>16</strong>|15°
                         </div>
                     </div>
                 </div>
@@ -66,8 +66,7 @@
 
 
     </div>
-    <div class="author">This app was coded by <a href="mailto:stephaniemm123@gmail.com"> Stephanie Muñoz</a>: <a
-            href="https://github.com/stephaniemm123/Weather-App"> Open source code.</a></div>
+    <div class="author"><a href="https://github.com/stephaniemm123/Weather-App">Open source code</a> by <a href="mailto:stephaniemm123@gmail.com"> Stephanie Muñoz</a></div>
     <script src="weather.js"></script>
 
 </body>
