@@ -11,6 +11,10 @@ body {
 	max-width: 550px;
 }
 
+button {
+	cursor: pointer;
+}
+
 .container2 {
 	background: coral;
 	opacity: 0.85;
