@@ -25,9 +25,9 @@ function displayWeather(response) {
 	heading.innerHTML = `${response.data.name}`;
 	let iconElement = document.querySelector('#icon');
 
-	let broken_Clouds = 'images/Broken_Clouds.jpg';
-	let few_Clouds = 'images/Few_Clouds.jpg';
-	let rain = 'images/rain.jpg';
+	let brokenCloudIcon = 'images/Broken_Clouds.jpg';
+	let fewCloudsIcon = 'images/Few_Clouds.jpg';
+	let rainIcon = 'images/rain.jpg';
 
 	document.querySelector('#humidity').innerHTML = response.data.main.humidity;
 	document.querySelector('#wind').innerHTML = Math.round(response.data.wind.speed);
